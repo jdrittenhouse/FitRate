@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="FitRate.Mobile.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FitRate.Mobile"
+    xmlns:auth="clr-namespace:FitRate.Mobile.Components.Auth">
+
+    <!-- Define your ShellContent; note that if you use these, you may not need to call Routing.RegisterRoute -->
+    <ShellContent Title="Main" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+    <ShellContent Title="Login" ContentTemplate="{DataTemplate auth:Login}" Route="Login" />
+    <ShellContent Title="Signup" ContentTemplate="{DataTemplate auth:Signup}" Route="Signup" />
+    
+</Shell>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    x:Class="FitRate.Mobile.Components.Profile.UserProfilePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Create Your Profile">
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+            <Label Text="Complete Your Profile" 
+             FontSize="28" 
+             HorizontalOptions="Center" />
+
+            <!-- Pre-populated, read-only email -->
+            <Entry x:Name="EmailEntry" 
+             Placeholder="Email" 
+             IsReadOnly="True" 
+             ReturnType="Next" />
+
+            <Entry x:Name="FirstNameEntry" Placeholder="First Name" ReturnType="Next" HorizontalOptions="FillAndExpand">
+                <Entry.Keyboard>
+                    <Keyboard x:FactoryMethod="Create">
+                        <x:Arguments>
+                            <KeyboardFlags>Suggestions,CapitalizeWord</KeyboardFlags>
+                        </x:Arguments>
+                    </Keyboard>
+                </Entry.Keyboard>
+            </Entry>
+
+            <Entry x:Name="LastNameEntry" Placeholder="Last Name" ReturnType="Next" HorizontalOptions="FillAndExpand" >
+                <Entry.Keyboard>
+                    <Keyboard x:FactoryMethod="Create">
+                        <x:Arguments>
+                            <KeyboardFlags>Suggestions,CapitalizeWord</KeyboardFlags>
+                        </x:Arguments>
+                    </Keyboard>
+                </Entry.Keyboard>
+            </Entry>
+
+            <HorizontalStackLayout Spacing="10">
+                <!-- Age field -->
+                <Entry x:Name="AgeEntry" 
+                        Placeholder="Age" 
+                        Keyboard="Numeric" 
+                        ReturnType="Next" />
+
+                <!-- Gender as a Picker -->
+                <Picker x:Name="GenderPicker" Title="Select Gender">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                            <x:String>Other</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </HorizontalStackLayout>
+
+            <!-- Height and Weight on the same row -->
+            <HorizontalStackLayout Spacing="10">
+                <Entry x:Name="HeightEntry" 
+               Placeholder="Height (in)" 
+               Keyboard="Numeric" 
+               ReturnType="Next"
+               HorizontalOptions="FillAndExpand" />
+                <Entry x:Name="WeightEntry" 
+               Placeholder="Weight (lbs)" 
+               Keyboard="Numeric" 
+               ReturnType="Next"
+               HorizontalOptions="FillAndExpand" />
+            </HorizontalStackLayout>
+
+            <!-- Goal Picker -->
+            <Label Text="Select your primary goal:" />
+            <Picker x:Name="GoalPicker">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Lose Weight</x:String>
+                        <x:String>Gain Strength</x:String>
+                        <x:String>Long Distance Training</x:String>
+                        <x:String>Maintain Weight</x:String>
+                        <x:String>Increase Vertical</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button Text="Save Profile" 
+              Clicked="OnSaveProfileClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

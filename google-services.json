@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "282268616365",
+    "project_id": "fitrateco",
+    "storage_bucket": "fitrateco.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282268616365:android:2377340170aa810378a824",
+        "android_client_info": {
+          "package_name": "com.fitrate.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS8FD-1nDTPZmHlYXiomw15kbc8Nm492k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
